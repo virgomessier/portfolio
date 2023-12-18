@@ -4,9 +4,11 @@
 @import 'base/mixins';
 @import 'base/animations';
 
-.container {
-    width: 1140px;
-    margin: 0 auto;
+* {
+		font-family: 'Montserrat';
 }
 
-
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
