@@ -1,0 +1,16 @@
+.subtitle {
+  color: #000;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: normal;
+  &_fz20 {
+    font-size: 20px;
+  }
+  &_fz14 {
+    font-size: 14px;
+  }
+  &_fz12 {
+    font-size: 12px;
+    font-weight: 500;
+  }
+}
