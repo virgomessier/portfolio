@@ -2,7 +2,7 @@
   position: fixed;
   top: 200px;
   left: 50px;
-  height: 340px;
+  height: 360px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -19,10 +19,21 @@
     font-weight: 700;
     height: 160px;
     width: 25px;
+    position: relative;
     span {
-      transform: rotate(-90deg) translate(-43%, -285%);
+      transform: rotate(-90deg);
       display: block;
       width: 160px;
+      position: absolute;
+      top: 0;
+      left: -68px;
+      top: 68px;
+    }
+  }
+  &__link img {
+    transition: 0.2s all;
+    &:hover { 
+      transform: scale(1.5);
     }
   }
 }
