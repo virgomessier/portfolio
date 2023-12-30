@@ -1,0 +1,38 @@
+.about {
+  min-height: 850px;
+  padding: 120px 0 120px 0;
+  &__subtitle {
+    position: relative;
+    padding-left: 10px;
+    @include before-circle;
+  }
+  &__grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  &__work-directions {
+    display: grid;
+    grid-template-columns: 60px 250px 60px 250px;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 20px;
+    margin-top: 40px;
+    position: relative;
+  }
+  &__wd-wrapper {
+    max-width: 200px;
+    position: relative;
+  }
+  &__workimg {
+    width: 50px;
+    height: 50px;
+    background: $main-color;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 25px;
+      height: 25px;
+    }
+  }  
+}
