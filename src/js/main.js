@@ -15,3 +15,10 @@ hamburger.addEventListener('click', () => {
 closeElem.addEventListener('click', () => {
 	menu.classList.remove('active');
 });
+
+const counters = document.querySelectorAll('.skills__grade-item-counter'),
+	scale = document.querySelectorAll('.skills__grade-scale span');
+
+	counters.forEach( (item, i) => {
+		scale[i].style.width = item.innerHTML;
+	});

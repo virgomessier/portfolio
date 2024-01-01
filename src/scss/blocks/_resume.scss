@@ -1,0 +1,109 @@
+.resume {
+    padding: 150px 0 0 0;
+    &__title-block {
+        text-align: center;
+        .divider {
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+    }
+    &__subtitle {
+        position: relative;
+        @include before-circle;
+        &:before {
+            left: 48%;
+            top: -50%;
+            transform: translateX(-48%);
+        }
+    }
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(420px, auto));
+        column-gap: 140px;
+        padding: 70px 65px 0 65px;
+    }
+    &__column {
+        ol {
+            list-style-type: none;
+            padding: 0;
+            li {
+                position: relative;
+                &:after {
+                    content: '';
+                    width: 1px;
+                    height: 100%;
+                    position: absolute;
+                    top: -5px;
+                    left: 7px;
+                    background-color: #000;
+                }
+            }
+        }
+        &-title {
+            margin: 0;
+            position: relative;
+            padding-left: 45px;
+            &:before {
+                content: '';
+                position: absolute;
+                width: 15px;
+                height: 15px;
+                background-color: $main-color;
+                border-radius: 100%;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+    &__item {
+        padding: 45px 0 0 45px;
+        position: relative;
+        &:before {
+            content: '';
+            width: 37px;
+            height: 1px;
+            background-color: #000;
+            position: absolute;
+            left: 8px;
+            top: 62px;
+        }
+        &-head {
+            display: grid;
+            grid-template-columns: 56px minmax(240px, auto);
+            grid-template-rows: minmax(21px, auto) minmax(18px, auto);
+            position: relative;
+            span {
+                position: absolute;
+                left: 17px;
+                top: 80%;
+                transform: translateY(-80%);
+                @include before-circle;
+                &:before {
+                    left: -17px;
+                }
+                max-width: 25px;
+                img {
+                    width: 100%;
+                }
+            }
+        }
+        &-university {
+            grid-column: 2/3;
+            margin: 0;
+            line-height: 21px;
+        }
+        &-profession {
+            grid-column: 2/3;
+            align-self: self-end;
+            margin: 0;
+            line-height: 18px;
+        }
+        &-descr {
+            padding: 12px 0 0 0;
+            margin: 0;
+            max-width: 375px;
+        }
+        
+    }
+}

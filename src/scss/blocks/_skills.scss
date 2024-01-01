@@ -1,0 +1,87 @@
+.skills {
+    margin-top: 150px;
+    &__title-block {
+        text-align: center;
+    }
+    &_dvmargin {
+        margin: 0 auto;
+    }
+    &__subtitle {
+        position: relative;
+        margin: 0;
+        padding-left: 15px;
+        @include before-circle;
+        &:before {
+            left: 48%;
+            transform: translateX(-48%);
+            top: -50%;
+
+        }
+    }
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(4, 270px);
+        column-gap: 15px;
+        row-gap: 15px;
+        margin-top: 60px;
+    }
+    &__item {
+        padding: 30px 30px 25px 30px;
+        border: solid 1px #202020;
+        box-shadow: 2px 2px 0 rgba(0,0,0, 0.4);
+        cursor: default;
+        background-color: #fafafa;
+        transition: 0.2s all ease;
+        &:hover {
+            transform: scale(1.05);
+          }
+        &-subtitle {
+            margin: 15px 0 0 0;
+        }
+        &-descr {
+            margin: 20px 0 0 0;
+        }
+        &-img {
+            width: 165px;
+            height: 100px;
+            display: flex;
+            justify-content: start;
+            align-items: center;
+        }
+    }
+    &__grade {
+        padding-top: 120px;
+        display: grid;
+        grid-template-columns: repeat(3, 350px);
+        column-gap: 45px;
+        row-gap: 30px;
+        &-item {
+            position: relative;
+            &-counter {
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+        }
+        &-subtitle {
+            display: inline-block;
+            margin: 0;
+            position: relative;
+            padding-left: 15px;
+            @include before-circle;
+        }
+        &-scale {
+            max-width: 350px;
+            height: 14px;
+            background-color: #e8e4de;
+            margin-top: 25px;
+            border-radius: 4px;
+            span {
+                display: block;
+                height: 100%;
+                border-radius: 4px;
+                background-color: $main-color;
+            }
+        }
+    }
+}
