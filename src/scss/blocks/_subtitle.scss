@@ -14,4 +14,14 @@
     font-weight: 500;
     line-height: 18px;
   }
+  &__section {
+    position: relative;
+    margin: 0;
+    @include before-circle;
+    &:before {
+      left: -12px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
 }

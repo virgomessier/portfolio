@@ -1,21 +1,5 @@
 .resume {
     padding: 150px 0 0 0;
-    &__title-block {
-        text-align: center;
-        .divider {
-            margin: 0 auto;
-            margin-top: 20px;
-        }
-    }
-    &__subtitle {
-        position: relative;
-        @include before-circle;
-        &:before {
-            left: 48%;
-            top: -50%;
-            transform: translateX(-48%);
-        }
-    }
     &__wrapper {
         display: grid;
         grid-template-columns: repeat(2, minmax(420px, auto));

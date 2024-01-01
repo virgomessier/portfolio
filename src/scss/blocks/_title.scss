@@ -7,4 +7,10 @@
   &_fz48 {
     font-size: 48px;
   }
+  &__block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
