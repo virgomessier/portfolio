@@ -219,7 +219,7 @@
 		</div>
 		<div class="container">
 			<div class="subtitle subtitle_fz16 main__subtitle">
-				Меня зовут Александра Смит
+				Меня зовут Юрий
 			</div>
 			<h1 class="title title_fz48 main__title">
 				Я <b>web-разработчик</b> из города Тбилиси
@@ -258,7 +258,7 @@
 						Меня зовут Юрий
 					</h3>
 					<div class="divider"></div>
-					<p class="descr descr_fz14">
+					<p class="descr descr_fz14 about__main-descr">
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
 						eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
 						enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -463,6 +463,13 @@
 					<h4 class="subtitle skills__item-subtitle">GitHub</h4>
 					<p class="descr skills__item-descr">Библиотека Jquery позволит ускорить разработку. Без необходимости интегрировать в проект мы её не будем, но навык работы с ней присутствует</p>
 				</article>
+				<article class="skills__item">
+					<div class="skills__item-img">
+						<img src="icons/skills/wordpress.svg" alt="GitHub">
+					</div>
+					<h4 class="subtitle skills__item-subtitle">WordPress</h4>
+					<p class="descr skills__item-descr">Библиотека Jquery позволит ускорить разработку. Без необходимости интегрировать в проект мы её не будем, но навык работы с ней присутствует</p>
+				</article>
 			</div>
 			<section class="skills__grade">
 				<article class="skills__grade-item">
@@ -652,7 +659,7 @@
 	<section class="contacts">
 		<div class="container">
 			<div class="contacts__wrapper">
-				<img class="contacts__img" src="image/last_photo.jpg" alt="Мое фото">
+				<img class="contacts__photo" src="image/last_photo.jpg" alt="Мое фото">
 				<div class="contacts__content">
 					<h2 class="subtitle subtitle_fz16 subtitle__section contacts__subtitle">Контакты</h2>
 					<h3 class="title contacts__title">Свяжитесь со мной</h3>
@@ -674,20 +681,26 @@
 					</div>
 					<form class="contacts__form" action="#">
 						<div class="contacts__input">
-							<input name="name" id="name" type="text">
+							<input required name="name" id="name" type="text">
 							<label for="name">Ваше имя</label>
 						</div>
 						<div class="contacts__input">
-							<input name="email" id="email" type="email">
+							<input required name="email" id="email" type="email">
 							<label for="email">Ваша почта</label>
 						</div>
 						<div class="contacts__textarea">
 							<textarea name="text" id="text"></textarea>
 							<label for="text">Ваше сообщение</label>
 						</div>
-						<button class="btn contacts__btn">
-							Отправить сообщение
-						</button>
+						<div class="contacts__triggers">
+							<button class="btn contacts__btn">
+								Отправить сообщение
+							</button>
+							<div class="contacts__policy">
+								<input required type="checkbox">
+								<span class="subtitle subtitle_fz12">Я согласен(а) с <a href="/policy.html" target="_blank">политикой конфиденциальности</a></span>
+							</div>
+						</div>
 					</form>
 				</div>
 			</div>
