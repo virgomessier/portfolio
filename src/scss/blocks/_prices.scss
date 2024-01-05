@@ -1,9 +1,9 @@
 .prices {
     padding: 60px 0 0 0;
     &__wrapper {
-        display: flex;
+        display: grid;
+        grid-template-columns: 420px 420px;
         justify-content: space-between;
-        flex-direction: row;
         padding: 0 50px 0 50px;
         margin-top: 40px;
     }
@@ -28,7 +28,7 @@
                 content: '';
                 width: 15px;
                 height: 15px;
-                background-color: $main-color;
+                background-color: var(--main-color);
                 border-radius: 100%;
                 position: absolute;
                 top: 50%;
@@ -40,6 +40,7 @@
             display: block;
             margin: 0;
             justify-self: end;
+            text-align: end;
         }
         &-descr {
             display: block;
