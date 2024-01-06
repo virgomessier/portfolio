@@ -16,6 +16,18 @@ closeElem.addEventListener('click', () => {
 	menu.classList.remove('active');
 });
 
+document.addEventListener('mousedown', (event) => {
+	const target = event.target;
+  
+	// Проверяем, является ли цель события элементом меню, но не .menu__overlay
+	const isClickInsideMenu = menu.contains(target) && !target.classList.contains('menu__overlay');
+  
+	// Если клик был сделан вне меню, то убираем класс 'active'
+	if (!isClickInsideMenu) {
+	  menu.classList.remove('active');
+	}
+  });
+
 const counters = document.querySelectorAll('.skills__grade-item-counter'),
 	scale = document.querySelectorAll('.skills__grade-scale span');
 
@@ -23,7 +35,8 @@ const counters = document.querySelectorAll('.skills__grade-item-counter'),
 		scale[i].style.width = item.innerHTML;
 	});
 
-	
+
+
 !function(exports) {
 	exports.submitGoogleForm = submitGoogleForm;
 	
@@ -49,3 +62,38 @@ const counters = document.querySelectorAll('.skills__grade-item-counter'),
 		return false;
 	}
 	}(typeof module === 'undefined' ? window : module.exports);
+
+$(document).ready(function () {
+
+	$(window).scroll(function() {
+		if ($(this).scrollTop() > 1200) {
+			$('.arrow-top').fadeIn();
+		} else {
+			$('.arrow-top').fadeOut();
+		}
+	});
+
+	$("a").on('click', function(event) {
+
+		// Make sure this.hash has a value before overriding default behavior
+		if (this.hash !== "") {
+			// Prevent default anchor click behavior
+			event.preventDefault();
+	
+			// Store hash
+			var hash = this.hash;
+	
+			// Using jQuery's animate() method to add smooth page scroll
+			// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+			$('html, body').animate({
+			scrollTop: $(hash).offset().top
+			}, 800, function(){
+		
+			// Add hash (#) to URL when done scrolling (default click behavior)
+			window.location.hash = hash;
+			});
+		} // End if
+	});
+
+
+});

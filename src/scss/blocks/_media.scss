@@ -2,6 +2,11 @@
     .sidesocial {
         display: none;
     }
+    .arrow-top {
+        &__link {
+            display: none;
+        }
+    }
 }
 
 @media (max-width: 1200px) {
@@ -391,5 +396,29 @@
             }
         }
     }
-    
+}
+
+@media (max-width: 319px) {
+    .main {
+        &__nav {
+            max-width: 148px;
+        }
+        &__ul {
+            flex-direction: column;
+            li:last-child {
+                margin-top: 40px;
+                a {
+                    color: #fafafa;
+                }
+            }
+        }
+        &__title {
+            width: 100%;
+        }
+    }
+    .title {
+        &_fz48 {
+            font-size: 20px;
+        }
+    }
 }

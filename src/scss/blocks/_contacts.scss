@@ -30,6 +30,11 @@
     &__social, &__subtitle-descr {
         margin-top: 20px; 
     }
+    &__social {
+        a {
+            text-decoration: none;
+        }
+    }
     &__link {
         margin-right: 20px;
     }
