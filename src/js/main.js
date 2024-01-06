@@ -23,6 +23,7 @@ const counters = document.querySelectorAll('.skills__grade-item-counter'),
 		scale[i].style.width = item.innerHTML;
 	});
 
+	
 !function(exports) {
 	exports.submitGoogleForm = submitGoogleForm;
 	
@@ -48,4 +49,3 @@ const counters = document.querySelectorAll('.skills__grade-item-counter'),
 		return false;
 	}
 	}(typeof module === 'undefined' ? window : module.exports);
-	  
