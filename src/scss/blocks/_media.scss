@@ -52,23 +52,6 @@
             grid-template-columns: repeat(3, 290px);
         }
     }
-    .portfolio {
-        &__wrapper {
-            grid-template-columns: repeat(3, 280px);
-            grid-auto-rows: 280px;
-            row-gap: 50px;
-            .vertical, .horizontal {
-                grid-row: unset;
-                grid-column: unset;
-            }
-        }
-        &__item {
-            &:hover {
-                transition: unset;
-                scale: unset;
-            }
-        }
-    }
     .prices {
         &__wrapper {
             padding: 0;
@@ -134,16 +117,6 @@
         &__grade {
             grid-template-columns: repeat(2, 1fr);
             row-gap: 55px;
-        }
-    }
-    .portfolio {
-        padding: 100px 0 0 0;
-        &__wrapper {
-            grid-template-columns: repeat(auto-fit, 300px);
-            grid-auto-rows: 280px;
-            row-gap: 10px;
-            column-gap: 10px;
-            justify-content: center;
         }
     }
     .prices {
@@ -242,7 +215,26 @@
     }
     .portfolio {
         padding: 80px 0 0 0;
+        .swiper {
+            &-button-next, &-button-prev {
+                // display: none;
+                top: 400px;
+            }
+            &-slide {
+                &-img {
+                    padding: 50px 10px 50px 10px;
+                    img {
+                        object-position: 30%;
+                        &:hover {
+                            transform: unset;
+                            box-shadow: unset;
+                        }
+                    }
+                }
+            }
+        }
     }
+
     .prices {
         &__wrapper {
             justify-content: center;
@@ -276,7 +268,7 @@
                 margin-right: 5px;
             }
         }
-    }  
+    } 
 }
 
 @media (max-width: 576px) {
