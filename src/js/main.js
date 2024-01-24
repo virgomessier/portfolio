@@ -49,7 +49,7 @@ const counters = document.querySelectorAll('.skills__grade-item-counter'),
 		}).join('&');
 		var xhr = new XMLHttpRequest();
 	
-		xhr.open('POST', form.action + '/formResponse', true);
+		xhr.open('POST', 'Access-Control-Allow-Origin: *', form.action + '/formResponse', true);
 		xhr.setRequestHeader('Accept',
 			'application/xml, text/xml, */*; q=0.01');
 		xhr.setRequestHeader('Content-type',
